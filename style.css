@@ -1,0 +1,67 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  font-size: 1.2rem;
+  background-color: #f7f7f7;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 2.5rem;
+  background-color: rgb(200,147,136);
+}
+
+.logo {
+  margin: 0;
+}
+
+nav a {
+  margin-left: 1.2rem;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+    background-color: rgb(243,230,213);
+    border-radius: 1rem;
+  max-width: 56rem;
+  margin: 2.5rem auto;
+  padding: 2.5rem 2.5rem;
+}
+
+.profile-img {
+  width: clamp(10rem, 30vw, 16.25rem);
+  border-radius: 1rem;
+  margin: 1.25rem 0 1.8rem 0;
+}
+
+.about-layout {
+  display: flex;
+  gap: 2.5rem;
+  align-items: flex-start;
+  margin-top: 1.8rem;
+}
+
+.about-text{
+    max-width: 30rem;
+}
+
+.content {
+  display: none;
+}
+
+.content.active {
+  display: block;
+}
+
+h2 {
+  margin-top: 0;
+}
