@@ -1,11 +1,50 @@
+/* add fonts */
+@font-face {
+  font-family: "Mitr";
+  src: url("font/mitr-bold-webfont.woff2") format("woff2"),
+       url("font/mitr-bold-webfont.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Moul";
+  src: url("font/moul-regular-webfont.woff2") format("woff2"),
+       url("font/moul-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "MPlus";
+  src: url("font/mplus1p-medium-webfont.woff2") format("woff2"),
+       url("font/mplus1p-medium-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "OpenSansItalic";
+  src: url("font/opensans-italic-variablefont_wdthwght-webfont.woff2") format("woff2"),
+       url("font/opensans-italic-variablefont_wdthwght-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: "MPlus", Arial, sans-serif;
   font-size: 1.2rem;
   background-color: #f7f7f7;
 }
 
 .navbar {
+  flex-wrap: flex;
+  justify-content: space-between;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -14,10 +53,14 @@ body {
 }
 
 .logo {
+  font-family: "Mitr", sans-serif;
+  font-weight: bold;
   margin: 0;
 }
 
 nav a {
+  font-family: "OpenSansItalic", Arial, sans-serif;
+  letter-spacing: 0.05em;
   margin-left: 1.2rem;
   text-decoration: none;
   color: black;
@@ -32,9 +75,9 @@ nav a:hover {
 main {
     background-color: rgb(243,230,213);
     border-radius: 1rem;
-  max-width: 56rem;
+  width: min(56rem, 92vw);
   margin: 2.5rem auto;
-  padding: 2.5rem 2.5rem;
+  padding: 2.5rem;
 }
 
 .profile-img {
@@ -54,6 +97,21 @@ main {
     max-width: 30rem;
 }
 
+.about-text p {
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+.about-text ul {
+  font-size: 1rem;
+  line-height: 1.6;
+  padding-left: 1.2rem;
+}
+
+.about-text li {
+  margin-bottom: 0.5rem;
+}
+
 .content {
   display: none;
 }
@@ -63,5 +121,33 @@ main {
 }
 
 h2 {
+  font-family: "Moul", sans-serif;
   margin-top: 0;
+}
+
+h3 {
+  font-family: "Moul", sans-serif;
+}
+
+.svg-box{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 700px){
+  .about-layout{
+    flex-direction: column;
+    gap: 1.2rem;
+    align-items: center;
+  }
+
+  .about-text{
+    max-width: 100%;
+  }
+
+  .profile-img{
+    width: min(16rem, 80%);
+    margin: 0;
+  }
 }
