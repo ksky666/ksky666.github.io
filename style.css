@@ -54,8 +54,9 @@ body {
 
 .logo {
   font-family: "Mitr", sans-serif;
-  font-weight: bold;
+  font-weight: normal;
   margin: 0;
+  color:rgb(243,230,213);
 }
 
 nav a {
@@ -66,10 +67,14 @@ nav a {
   color: black;
   font-weight: bold;
   cursor: pointer;
+  padding: 0.4rem 0.6rem;  
+  border-radius: 0.5rem;   
+  transition: background-color 0.3s ease;
 }
 
 nav a:hover {
-  text-decoration: underline;
+  background-color:rgb(235, 171, 158);
+  text-decoration: none;
 }
 
 main {
@@ -99,11 +104,9 @@ main {
 
 .about-text p {
   line-height: 1.6;
-  font-size: 1rem;
 }
 
 .about-text ul {
-  font-size: 1rem;
   line-height: 1.6;
   padding-left: 1.2rem;
 }
@@ -116,16 +119,37 @@ main {
   display: none;
 }
 
+.content p, .content ul, .content li {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
 .content.active {
   display: block;
+}
+
+/* unify list spacing, to make sure it's align with the about page*/
+.content ul {
+  margin: 0.8rem 0;    
+  padding-left: 1.2rem; 
+}
+
+.content li {
+  margin-bottom: 0.5rem;
+}
+
+.content li:last-child {
+  margin-bottom: 0;     
 }
 
 h2 {
   font-family: "Moul", sans-serif;
   margin-top: 0;
+  color: rgb(200,147,136);
 }
 
 h3 {
+  color: rgb(200,147,136);
   font-family: "Moul", sans-serif;
 }
 
