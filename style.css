@@ -171,7 +171,8 @@ h3 {
   }
 
   .profile-img{
-    width: min(16rem, 80%);
+    width: 80%;
+    max-width: 16rem;
     margin: 0;
   }
 }
